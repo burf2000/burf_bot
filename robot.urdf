@@ -30,7 +30,7 @@
   </link>
 
  <joint name="base_to_lwheel" type="continuous">
-    <parent link="base_link"/>
+    <parent link="base_frame"/>
     <child link="lwheel"/>
     <origin xyz="0 0.085 0.07" rpy="1.5708 0 0"/>
   </joint>
