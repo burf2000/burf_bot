@@ -8,6 +8,6 @@
     <param name="frame_id" value="laser"/>
   </node>
   <node pkg="tf" type="static_transform_publisher" name="base_frame_2_laser" args="0 0 0 0 0 0 /base_frame /laser 100"/>
-  <include file="default_mapping.launch"/>
+  <include file="$(find burf_bot)/launch/default_mapping.launch"/>
   <include file="$(find hector_geotiff)/launch/geotiff_mapper.launch"/>
 </launch>
