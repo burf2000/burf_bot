@@ -1,11 +1,6 @@
 <launch>
   <master auto="start"/>
 
-  <!-- Run the map server -->
- <node name="map_node" pkg="map_server" type="map_server" args="$(find my_package)/config/map.yaml" respawn="false">
-    <param name="frame_id" value="/odom" />
-</node>
-
   <!--- Run AMCL -->
   <include file="$(find amcl)/examples/amcl_omni.launch" />
 
