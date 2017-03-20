@@ -2,9 +2,9 @@
 
 <launch>
   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find burf_bot)/main.rviz" required="true"/>
-<param name="robot_model" textfile="robot.urdf" />
-<node pkg="differential_drive" type="diff_tf.py" name="diff_tf">
-     <rosparam param="rate">8.0</rosparam>
-     <rosparam param="base_width">0.16</rosparam>
+<param name="robot_description" textfile="robot.urdf" />
+  
+ <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="5.0" />
   </node>
 </launch>
